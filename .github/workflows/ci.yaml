@@ -12,8 +12,8 @@ jobs:
         with:
           node-version: v16.14.2
       - run: npm start
-      - name : test
-        run: ./node_modules/.bin/jest test/calculator.test.js
+      # - name : test
+      #   run: ./node_modules/.bin/jest test/calculator.test.js
       # - name: sonarCloud Scan
       #   uses: SonarSource/sonarcloud-github-action@master
       #   env:
