@@ -3,7 +3,8 @@ on:
   pull_request:
     branches: [develop]
 jobs:
-  build:
+   check-application:
+    name: CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -11,7 +12,8 @@ jobs:
         with:
           node-version: v16.14.2
       - run: npm start
-      - run: npm test
+      - name : test
+        run: ./node_modules/.bin/jest test/calculator.test.js
       # - name: sonarCloud Scan
       #   uses: SonarSource/sonarcloud-github-action@master
       #   env:
