@@ -1,9 +1,10 @@
 name: ci-nodejs-workflow
 on:
   pull_request:
-    branches: [develop]
+    branches: 
+      - develop
 jobs:
-   check-application:
+  check-application:
     name: CI
     runs-on: ubuntu-latest
     steps:
